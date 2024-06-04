@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
+  color: #404040;
+}
+
+section {
+  padding: 6.1rem;
+}
+
+h2 {
+  font-size: 1.92rem;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  gap: 2.5rem;
+}
+
+.acordeao {
+  border-radius: 4rem;
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  & .cabecalho {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3.12rem;
+    background-color: white;
+    border-radius: 4rem;
+    font-weight: 700;
+
+    &::after {
+      content: "\23F7";
+    }
+  }
+
+  & .conteudo {
+    display: none;
+  }
+
+  &.ativo {
+    & .cabecalho {
+      background-color: #754204;
+      color: white;
+      border-radius: 2.5rem 2.5rem 0 0;
+
+      &::after {
+        content: "\23F6";
+      }
+    }
+
+    & .conteudo {
+      display: flex;
+      flex-flow: column;
+      gap: 1.6rem;
+      padding: 2rem;
+      background-color: #fff1de;
+      border-radius: 0 0 2.5rem 2.5rem;
+    }
+  }
+}
